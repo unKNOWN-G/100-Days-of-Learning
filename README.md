@@ -34,6 +34,7 @@ Day |Accomplishments                                                            
 ----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------
 1   | <ol><li>Mark Down Basics</li><li>Data Analysis</li><ul><li>Retrieving Data</li><li>Data Cleaning</li><li>Exploratory data analysis</li><li>Feature Engineering</li><li>Variable Transformations</li></ul></ol> | 4 Hours
 2   | <ol><li>Excel</li></ol> | 2 Hours
+3   | <ol>
 
 
 
