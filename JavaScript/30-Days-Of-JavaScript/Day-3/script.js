@@ -1,7 +1,7 @@
 
 let firstName, lastName, country, city, age, isMarried, year;
-firstName = "Venkata"
-lastName = "Giri"
+firstName = ""
+lastName = "unKNOWN"
 country = "India"
 city = "Vijayawada"
 age = 20
