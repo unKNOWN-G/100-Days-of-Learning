@@ -12,11 +12,18 @@ using std::max_element;
 
 class StackWithMax {
     vector<int> stack;
+    int arr[1000000] = {INT32_MIN};
+    
+    
 
   public:
 
     void Push(int value) {
         stack.push_back(value);
+        if(stack.size() == 0)
+            arr[stack.size()] = value;
+        else
+            arr[stack.size()] = arr[stack.size()-1]>value?arr[stack.size()-1]:value;
     }
 
     void Pop() {
@@ -24,9 +31,9 @@ class StackWithMax {
         stack.pop_back();
     }
 
-    int Max() const {
+    int Max(){
         assert(stack.size());
-        return *max_element(stack.begin(), stack.end());
+        return arr[stack.size()];
     }
 };
 

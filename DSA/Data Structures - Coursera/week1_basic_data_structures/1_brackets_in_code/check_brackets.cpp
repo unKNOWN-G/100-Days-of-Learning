@@ -25,21 +25,41 @@ struct Bracket {
 int main() {
     std::string text;
     getline(std::cin, text);
-
     std::stack <Bracket> opening_brackets_stack;
-    for (int position = 0; position < text.length(); ++position) {
+    int flag = 1;
+    int position;
+    for ( position = 0; position < text.length(); ++position) {
         char next = text[position];
-
+        
+        Bracket A(next,position+1);
         if (next == '(' || next == '[' || next == '{') {
-            // Process opening bracket, write your code here
+            opening_brackets_stack.push(A);
         }
 
         if (next == ')' || next == ']' || next == '}') {
-            // Process closing bracket, write your code here
+            if(opening_brackets_stack.empty())
+                {
+                    std::cout<<position+1;
+                    flag = 0;
+                    break;
+                }
+            else if(!(opening_brackets_stack.top().Matchc(A.type)))
+                {
+                    std::cout<<position+1;
+                    flag = 0;
+                    break;
+                }
+            else
+                opening_brackets_stack.pop();
         }
     }
 
-    // Printing answer, write your code here
+    if(flag){
+        if(opening_brackets_stack.empty())
+            std::cout<<"Success";
+        else
+            std::cout<<opening_brackets_stack.top().position;
+    }
 
     return 0;
 }
