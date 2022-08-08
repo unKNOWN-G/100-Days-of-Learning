@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src="./script.js"></script>
+        <link rel = "stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id = "title">
+            <h1>Validating Web Forms</h1>
+        </div>
+        <div class="block" id="firstName">
+            <h3>First Name</h3>
+            <input type="name" oninput="firstNameValidate()"/>
+            <p></p>
+        </div>
+        <!---->
+        <div class="block" id="lastName">
+            <h3>Last Name</h3>
+            <input type="name" oninput="lastNameValidate()"/>
+            <p></p>
+        </div>
+        <!---->
+        <div class="block" id="email">
+            <h3>Email</h3>
+            <input type="email" oninput="emailValidate()"/>
+            <p></p>
+        </div><!---->
+        <div class="block" id="password">
+            <h3>Password</h3>
+            <input type="password" oninput="passwordValidate()"/>
+            <p></p>
+        </div><!---->
+        <div class="block" id="bio">
+            <h3>Your Bio</h3>
+            <textarea  oninput="bioValidate()" placeholder="What do you think about us?"></textarea>
+            <p></p>
+        </div>
+        <button onclick="submitValidate()">Submit</button>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+.description{
+    color: orange;
+    font-size: 20px;
+}
+.inpBlock{
+    text-align: center;
+}
+#quantity{
+    padding: 10px 20px 10px 20px;
+    width: 300px;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+}
+#genButton{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+}
+#title{
+    font-family: 'Zilla Slab', serif;
+    color: black;
+    text-align: center;
+}
+#authorName{
+    color:green;
+    text-align: center;
+    margin-right:50px ;
+}
+#numTable{
+    margin: auto;
+}
+.col{
+    background-color: white;
+    border: 2px gray solid;
+    border-radius: 15%;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+}

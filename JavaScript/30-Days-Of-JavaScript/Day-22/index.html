@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,900&display=swap" rel="stylesheet">    <link href="./style.css" type="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            
+        </tr>
+    </table>
+    <table>
+        <script>
+            function isprime(number){
+                let isPrime = true;
+                number = parseInt(number)
+                for (let i = 2; i < number; i++) {
+                    // console.log(number, typeof number, i, typeof i)
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }}
+                
+                return isPrime
+            }
+            function colorDecider(x){
+                x = parseInt(x)
+                if(isprime(x)){
+                    return "red"
+                }
+                else if(x%2==0){
+                    return "green"
+                }
+                else{
+                    return "orange"
+                }
+            }
+
+            let row
+            let col
+            for(let i=0;i<17;i++){
+                row = document.createElement('tr')
+                document.body.appendChild(row)
+                for(let j =0; j<6;j++){
+                    let col = document.createElement('td')
+                    col.style.fontSize = '20px'
+                    col.style.color  = '#FFFFFF'
+                    col.style.backgroundColor = colorDecider(i*6+j)
+                    col.style.fontFamily =  'Exo 2'
+                    col.textContent = i*6+j
+                    col.style.padding = '15px'
+                    col.style.border = '2px white solid'
+                    document.body.appendChild(col)
+                }
+                
+            }
+            
+        </script>
+    </table>
+    
+</body>
+</html>
